@@ -1,0 +1,24 @@
+{% if site.name === title %}
+  {% set pageTitle = title %}
+{% else %}
+  {% set pageTitle = title + ' - ' + site.name %}
+{% endif %}
+
+{% set siteTitle = site.name %}
+{% set currentUrl = site.url + page.url %}
+
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}">
+
+<meta property="og:site_name" content="{{ siteTitle }}"/>
+<meta property="og:title" content="{{ pageTitle }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{{ currentUrl }}"/>
+
+<!-- TODO: add social image meta tags for twitter, facebook, etc. -->
+
+<meta name="description" content="{{ metaDesc }}"/>
+<meta name="twitter:description" content="{{ metaDesc }}"/>
+<meta name="og:description" content="{{ metaDesc }}"/>
+
+<!-- TODO: add favicon -->
