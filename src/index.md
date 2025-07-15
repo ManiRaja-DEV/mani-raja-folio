@@ -1,9 +1,5 @@
 ---
-title: Home Page
-description: This is the home page.
+title: "Mani Raja - Fullstack Developer"
+metaDesc: "Freelance fullstack developer crafting scalable web applications, tools, and custom digital solutions."
 layout: layouts/base.njk
 ---
-
-# Home Page
-
-You are on the home page!
