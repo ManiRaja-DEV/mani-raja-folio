@@ -77,3 +77,16 @@ a {
     interpolate-size: allow-keywords;
   }
 }
+
+/* Theme variables */
+
+:root {
+  --font: "Manrope", sans-serif;
+  --background: #edfeed;
+  --black: #0a0a0a;
+  --white: #fefefe;
+  --grey: #353535;
+  --green: #14794f;
+  --gold: #d0ad51;
+  --spacing: 0.25rem;
+}
