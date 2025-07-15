@@ -1,0 +1,46 @@
+{
+  "name": "eleventy-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist results",
+
+    "predev": "npm run clean",
+    "prebuild": "npm run clean",
+    "dev": "run-p eleventy:dev css:dev js:dev",
+    "build": "run-s eleventy:build css:build js:build",
+
+    "eleventy:dev": "eleventy --serve",
+    "css:dev": "esbuild src/css/**/*.css --outdir=dist --watch --sourcemap=inline",
+    "js:dev": "esbuild src/js/*.ts --format=esm --bundle --splitting --outdir=dist --watch --sourcemap=inline",
+
+    "eleventy:build": "eleventy",
+    "css:build": "esbuild src/css/**/*.css --outdir=dist --minify",
+    "js:build": "esbuild src/js/*.ts --format=esm --bundle --splitting --outdir=dist --minify",
+
+    "lint": "run-s lint:html lint:css lint:js",
+
+    "prelint:html": "npm run build",
+    "lint:html": "npx achecker dist",
+    "lint:css": "stylelint src/css/**/*.css --color -f verbose",
+    "lint:js": "npx eslint src/js/**/*.ts --color"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@eslint/js": "^9.31.0",
+    "accessibility-checker": "^4.0.6",
+    "esbuild": "^0.25.6",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0"
+  }
+}
