@@ -1,0 +1,46 @@
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-head" role="banner">
+  <div class="site-head__inner">
+    <a href="/" class="site-head__brand" aria-label="{{ site.name }} - home" {{ helpers.getLinkActiveState(page.url) | safe }}>
+      Mani.
+    </a>
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <button type="button" class="nav__menu-btn" aria-expanded="false" aria-label="Menu" aria-controls="main-nav">
+        <div class="nav__menu-lines-wrapper" aria-hidden="true">
+          <div class="nav__menu-line nav__menu-line-1"></div>
+          <div class="nav__menu-line nav__menu-line-2"></div>
+        </div>
+        <div class="nav__menu-text-wrapper">
+          <p class="nav__menu-text nav__menu-text-open">Menu</p>
+          <p class="nav__menu-text nav__menu-text-close">Close</p>
+        </div>
+      </button>
+      <div class="nav__menu-wrapper">
+        <div class="nav__menu">
+          <ul class="nav__menu-list" role="list">
+            <div class="nav__menu-image-wrapper">
+              <img class="nav__menu-image" src="https://placehold.co/927x1112" alt="Profile Picture"/>
+            </div>
+            <div class="nav__menu-links-wrapper">
+              {% for item in navigation.items %}
+                <li class="nav__menu-list-item">
+                  <a class="nav__menu-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+                </li>
+              {% endfor %}
+              <div class="nav__contact-links-wrapper">
+                <a href="tel:+919087505032" class="nav__contact-link">
+                  T:
+                  <span>+91 9087505032</span>
+                </a>
+                <a href="mailto:hellomaniraja@gmail.com" class="nav__contact-link">
+                  E:
+                  <span>hellomaniraja@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
