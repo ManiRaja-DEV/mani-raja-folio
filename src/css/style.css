@@ -72,6 +72,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  all: unset;
+  outline: revert;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
