@@ -5,22 +5,17 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist results",
-
     "predev": "npm run clean",
     "prebuild": "npm run clean",
     "dev": "run-p eleventy:dev css:dev js:dev",
     "build": "run-s eleventy:build css:build js:build",
-
     "eleventy:dev": "eleventy --serve",
     "css:dev": "esbuild src/css/**/*.css --outdir=dist --watch --sourcemap=inline",
     "js:dev": "esbuild src/js/*.ts --format=esm --bundle --splitting --outdir=dist --watch --sourcemap=inline",
-
     "eleventy:build": "eleventy",
     "css:build": "esbuild src/css/**/*.css --outdir=dist --minify",
     "js:build": "esbuild src/js/*.ts --format=esm --bundle --splitting --outdir=dist --minify",
-
     "lint": "run-s lint:html lint:css lint:js",
-
     "prelint:html": "npm run build",
     "lint:html": "npx achecker dist",
     "lint:css": "stylelint src/css/**/*.css --color -f verbose",
