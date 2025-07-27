@@ -27,15 +27,15 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@eslint/js": "^9.31.0",
-    "accessibility-checker": "^4.0.6",
+    "@eslint/js": "^9.32.0",
+    "accessibility-checker": "^4.0.7",
     "esbuild": "^0.25.8",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "globals": "^16.3.0",
     "npm-run-all": "^4.1.5",
     "stylelint": "^16.22.0",
     "stylelint-config-standard": "^38.0.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.37.0"
+    "typescript-eslint": "^8.38.0"
   }
 }
